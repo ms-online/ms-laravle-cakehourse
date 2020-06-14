@@ -69,25 +69,28 @@
                 <div class="title m-b-md">
                     蛋糕预定列表
                 </div>
-                <p>{{$type}} - {{$size}} - ¥{{$price}}</p>
 
-                @if($price > 100)
-                <p>这个蛋糕太贵了！</p>
-                @elseif($price < 50)
-                <p>这个蛋糕太实惠了！</p>
-                @else
-                <p>这个蛋糕的价格比较合理</p>
-                @endif
+                <!-- @for($i = 0; $i < 5; $i++)
+                 <p>i变量的值分别为：{{$i}}</p>
+                @endfor -->
 
-                <!-- 除非为真，否则就执行代码 -->
-                @unless($size == '10 英寸')
-                <p>蛋糕的尺寸不为10英寸</p>
-                @endunless
+                <!-- @for($i = 0; $i < count($cakes); $i++)
+                <p>{{$cakes[$i]['type']}}</p>
+                @endfor -->
 
-                @php
-                $name = 'Summer';
-                echo($name);
-                @endphp
+                @foreach($cakes as $cake)
+                <div>
+                    {{$loop -> index}} - {{$cake['type']}} - {{$cake['size']}}
+
+                    @if($loop->first)
+                    <span> - 这个是循环体中的第一项</span>
+                    @endif
+
+                    @if($loop->last)
+                    <span> - 这个是循环体中的最后一项</span>
+                    @endif
+                </div>
+                @endforeach
             </div>
         </div>
     </body>

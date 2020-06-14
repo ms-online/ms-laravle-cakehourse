@@ -19,11 +19,11 @@ Route::get('/', function () {
 
 Route::get('/cakes', function () {
     $cakes = [
-        'type'=>'生日蛋糕',
-        'size'=> '8 英寸',
-        'price'=> 80
-    ];
-    return view('cakes',$cakes);
+        ['type' => '海绵蛋糕', 'size' => '10英寸'],
+        ['type' => '戚风蛋糕', 'size' => '8英寸'],
+        ['type' => '奶酪蛋糕', 'size' => '6英寸']
+      ];
+    return view('cakes',['cakes'=> $cakes]);
     // return '甜品屋';
     // return ['name'=>'Triamisu', 'size'=>'8 inch'];
 });
