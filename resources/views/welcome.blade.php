@@ -19,7 +19,7 @@
 <div class="content">
     <img src="/img/misscake.png" alt=" logo">
     <div class="title m-b-md">
-        Misscake-蛋糕房
+        MissCake-董小姐的蛋糕房
     </div>
 </div>
 </div>
