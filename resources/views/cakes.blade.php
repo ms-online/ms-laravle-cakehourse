@@ -70,6 +70,24 @@
                     蛋糕预定列表
                 </div>
                 <p>{{$type}} - {{$size}} - ¥{{$price}}</p>
+
+                @if($price > 100)
+                <p>这个蛋糕太贵了！</p>
+                @elseif($price < 50)
+                <p>这个蛋糕太实惠了！</p>
+                @else
+                <p>这个蛋糕的价格比较合理</p>
+                @endif
+
+                <!-- 除非为真，否则就执行代码 -->
+                @unless($size == '10 英寸')
+                <p>蛋糕的尺寸不为10英寸</p>
+                @endunless
+
+                @php
+                $name = 'Summer';
+                echo($name);
+                @endphp
             </div>
         </div>
     </body>

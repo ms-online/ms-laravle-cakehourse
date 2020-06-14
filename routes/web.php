@@ -20,8 +20,8 @@ Route::get('/', function () {
 Route::get('/cakes', function () {
     $cakes = [
         'type'=>'生日蛋糕',
-        'size'=> '10 英寸',
-        'price'=> 100
+        'size'=> '8 英寸',
+        'price'=> 80
     ];
     return view('cakes',$cakes);
     // return '甜品屋';
