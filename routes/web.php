@@ -18,7 +18,12 @@ Route::get('/', function () {
 });
 
 Route::get('/cakes', function () {
-    // return view('cakes');
+    $cakes = [
+        'type'=>'生日蛋糕',
+        'size'=> '10 英寸',
+        'price'=> 100
+    ];
+    return view('cakes',$cakes);
     // return '甜品屋';
-    return ['name'=>'Triamisu', 'size'=>'8 inch'];
+    // return ['name'=>'Triamisu', 'size'=>'8 inch'];
 });
