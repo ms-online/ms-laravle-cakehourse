@@ -17,23 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/cakes', function () {
-    $cakes = [
-        ['type' => '海绵蛋糕', 'size' => '10英寸'],
-        ['type' => '戚风蛋糕', 'size' => '8英寸'],
-        ['type' => '奶酪蛋糕', 'size' => '6英寸']
-      ];
-      $name = request('name');
-    return view('cakes',[
-        'cakes'=> $cakes,
-        'name' => $name,
-        'age'=>request('age')
-        ]);
-    // return '甜品屋';
-    // return ['name'=>'Triamisu', 'size'=>'8 inch'];
-});
-
-Route::get('/cakes/{id}', function ($id) {
-    // 使用$id变量来查询数据库中匹配的蛋糕预定信息
-    return view('details',['id'=>$id]);
-});
+Route::get('/cakes', 'CakesController@index');
+Route::get('/cakes/{id}', 'CakesController@show');
