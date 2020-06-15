@@ -32,3 +32,8 @@ Route::get('/cakes', function () {
     // return '甜品屋';
     // return ['name'=>'Triamisu', 'size'=>'8 inch'];
 });
+
+Route::get('/cakes/{id}', function ($id) {
+    // 使用$id变量来查询数据库中匹配的蛋糕预定信息
+    return view('details',['id'=>$id]);
+});
