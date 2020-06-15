@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCakesTable extends Migration
+class AddPriceToCakesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,8 @@ class CreateCakesTable extends Migration
      */
     public function up()
     {
-        Schema::create('cakes', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-            $table->string('type');
-            $table->string('size');
-            $table->string('name');
-            // $table->integer('price');(不推荐)
+        Schema::table('cakes', function (Blueprint $table) {
+            $table->integer('price');
         });
     }
 
@@ -30,6 +25,8 @@ class CreateCakesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cakes');
+        Schema::table('cakes', function (Blueprint $table) {
+            //
+        });
     }
 }
