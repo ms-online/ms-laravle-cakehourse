@@ -27,10 +27,14 @@ class CakeController extends Controller
     }
 
     public function store(){
-        error_log(request('name'));
-        error_log(request('type'));
-        error_log(request('size'));
+        $cake = new Cake();
 
-        return redirect('/');
+        $cake->name = request('name');
+        $cake->type = request('type');
+        $cake->size= request('size');
+
+        $cake->save();
+
+        return redirect('/')->with('msg','恭喜你蛋糕预定成功！');
     }
 }
