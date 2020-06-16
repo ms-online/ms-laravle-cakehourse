@@ -17,5 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/cakes', 'CakesController@index');
-Route::get('/cakes/{id}', 'CakesController@show');
+Route::get('/cakes', 'CakeController@index');
+Route::get('/cakes/create', 'CakeController@create');
+Route::get('/cakes/{id}', 'CakeController@show');
+
