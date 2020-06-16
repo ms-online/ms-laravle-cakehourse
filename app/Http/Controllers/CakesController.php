@@ -3,21 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Cake;
 
 class CakesController extends Controller
 {
     public function index(){
-        $cakes = [
-            ['type' => '海绵蛋糕', 'size' => '10英寸'],
-            ['type' => '戚风蛋糕', 'size' => '8英寸'],
-            ['type' => '奶酪蛋糕', 'size' => '6英寸']
-          ];
-          $name = request('name');
-        return view('cakes',[
-            'cakes'=> $cakes,
-            'name' => $name,
-            'age'=>request('age')
-            ]);
+        $cakes = Cake::all();  
+        // $cakes = Cake::orderBy('name', 'desc')->get();
+        // $cakes = Cake::where('type','起司蛋糕')->get();
+        // $cakes = Cake::latest()->get();
+
+        return view('cakes',['cakes'=> $cakes]);
     }
 
     public function show($id){

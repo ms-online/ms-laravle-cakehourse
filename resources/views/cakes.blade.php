@@ -7,8 +7,6 @@
             蛋糕预定列表
         </div>
 
-        <p>{{$name}}</p>
-        <p>{{$age}}</p>
 
         <!-- @for($i = 0; $i < 5; $i++)
         <p>i变量的值分别为：{{$i}}</p>
@@ -20,15 +18,7 @@
 
         @foreach($cakes as $cake)
         <div>
-            {{$loop -> index}} - {{$cake['type']}} - {{$cake['size']}}
-
-            @if($loop->first)
-            <span> - 这个是循环体中的第一项</span>
-            @endif
-
-            @if($loop->last)
-            <span> - 这个是循环体中的最后一项</span>
-            @endif
+           {{ $cake['name']}} - {{$cake['type']}} - {{$cake['size']}}
         </div>
         @endforeach
     </div>
