@@ -25,4 +25,12 @@ class CakeController extends Controller
     public function create(){
         return view('cakes.create');
     }
+
+    public function store(){
+        error_log(request('name'));
+        error_log(request('type'));
+        error_log(request('size'));
+
+        return redirect('/');
+    }
 }

@@ -19,5 +19,6 @@ Route::get('/', function () {
 
 Route::get('/cakes', 'CakeController@index');
 Route::get('/cakes/create', 'CakeController@create');
+Route::post('/cakes', 'CakeController@store');
 Route::get('/cakes/{id}', 'CakeController@show');
 

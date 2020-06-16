@@ -21,6 +21,7 @@
     <div class="title m-b-md">
         MissCake-董小姐的蛋糕房
     </div>
+    <a href="/cakes/create">点击进入预定蛋糕界面</a>
 </div>
 </div>
 
