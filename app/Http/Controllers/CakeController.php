@@ -18,7 +18,8 @@ class CakeController extends Controller
 
     public function show($id){
     // 使用$id变量来查询数据库中匹配的蛋糕预定信息
-    return view('cakes.show',['id'=>$id]);
+    $cake = Cake::findOrFail($id);
+    return view('cakes.show',['cake'=>$cake]);
     }
 
     public function create(){
