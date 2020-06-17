@@ -15,6 +15,7 @@
                     @endif
 
                     You are logged in!
+                    <p><a href="/cakes">查看所有蛋糕预定！</a></p>
                 </div>
             </div>
         </div>
