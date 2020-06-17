@@ -38,4 +38,11 @@ class CakeController extends Controller
 
         return redirect('/')->with('msg','恭喜你蛋糕预定成功！');
     }
+
+    public function destroy($id){
+        $cake = Cake::findOrFail($id);
+
+        $cake->delete();
+        return redirect('/cakes');
+    }
 }
