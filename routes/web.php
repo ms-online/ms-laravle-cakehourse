@@ -25,6 +25,8 @@ Route::get('/cakes/{id}', 'CakeController@show')->middleware('auth');
 Route::DELETE('/cakes/{id}','CakeController@destroy')->middleware('auth');
 
 
-Auth::routes();
+Auth::routes([
+    'register' => false
+]);
 
 Route::get('/home', 'HomeController@index')->name('home');
