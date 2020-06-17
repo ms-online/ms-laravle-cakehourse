@@ -1,26 +1,15 @@
 @extends('layouts.layout')
 
 @section('content')
-<div class="flex-center position-ref full-height">
-    <div class="content">
-        <div class="title m-b-md">
-            蛋糕预定列表
-        </div>
-
-
-        <!-- @for($i = 0; $i < 5; $i++)
-        <p>i变量的值分别为：{{$i}}</p>
-        @endfor -->
-
-        <!-- @for($i = 0; $i < count($cakes); $i++)
-        <p>{{$cakes[$i]['type']}}</p>
-        @endfor -->
-
-        @foreach($cakes as $cake)
-        <div>
-           {{ $cake['name']}} - {{$cake['type']}} - {{$cake['size']}}
+    <div class="wrapper cake-index">
+        <h1>蛋糕预定列表</h1>
+          @foreach($cakes as $cake)
+        <div class="cake-item">
+             <img src="/img/cake.png" alt="cake icon">
+             <h4><a href="/cakes/{{$cake->id}}">{{$cake->name}}</a></h4>
         </div>
         @endforeach
     </div>
-</div>
+      
+
 @endsection
