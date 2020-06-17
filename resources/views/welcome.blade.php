@@ -22,7 +22,7 @@
         MissCake-董小姐的蛋糕房
     </div>
     <p class="msg">{{session('msg')}}</p>
-    <a href="/cakes/create">点击进入预定蛋糕界面</a>
+    <a href="{{ route('cakes.create')}}">点击进入预定蛋糕界面</a>
 </div>
 </div>
 

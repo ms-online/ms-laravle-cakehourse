@@ -11,11 +11,11 @@
       <li>{{ $fresh_fruit}}</li>
     @endforeach
   </ul>
-  <form action="/cakes/{{$cake->id}}" method="POST">
+  <form action="{{ route('cakes.destroy',$cake->id) }}" method="POST">
     @csrf
     @method('DELETE')
     <button>订单已处理</button>
 </form>
 </div>
-<a href="/cakes" class="back"><- 返回所有预定列表 -></a>
+<a href="{{route('cakes.index')}}" class="back"><- 返回所有预定列表 -></a>
 @endsection

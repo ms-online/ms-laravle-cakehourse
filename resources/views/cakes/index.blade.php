@@ -6,7 +6,7 @@
           @foreach($cakes as $cake)
         <div class="cake-item">
              <img src="/img/cake.png" alt="cake icon">
-             <h4><a href="/cakes/{{$cake->id}}">{{$cake->name}}</a></h4>
+             <h4><a href="{{route('cakes.show',$cake->id)}}">{{$cake->name}}</a></h4>
         </div>
         @endforeach
     </div>
