@@ -19,6 +19,7 @@ class CreateCakesTable extends Migration
             $table->string('type');
             $table->string('size');
             $table->string('name');
+            $table->json('fresh_fruits');
             // $table->integer('price');(不推荐)
         });
     }

@@ -22,6 +22,14 @@
 <option value="8英寸">8英寸</option>
 <option value="10英寸">10英寸</option>
 </select>
+<fieldset>
+    <label>额外预定水果拼盘：</label>
+    <input type="checkbox" name="fresh_fruits[]" value="芒果">芒果<br/>
+    <input type="checkbox" name="fresh_fruits[]" value="苹果">苹果<br/>
+    <input type="checkbox" name="fresh_fruits[]" value="草莓">草莓<br/>
+    <input type="checkbox" name="fresh_fruits[]" value="西瓜">西瓜<br/>
+    <input type="checkbox" name="fresh_fruits[]" value="葡萄">葡萄<br/>
+</fieldset>
 <input type="submit" value="预定蛋糕">
 </form>
 </div>

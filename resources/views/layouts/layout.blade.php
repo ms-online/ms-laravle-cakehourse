@@ -16,7 +16,7 @@
             @yield('content')
 
             <footer>
-                <p>Copyright 2021 Cake Hourse</p>
+                <p>Copyright 2021 Cake House</p>
             </footer>
     </body>
 </html>
