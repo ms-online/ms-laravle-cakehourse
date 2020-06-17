@@ -32,6 +32,7 @@ class CakeController extends Controller
         $cake->name = request('name');
         $cake->type = request('type');
         $cake->size= request('size');
+        $cake->fresh_fruits = request('fresh_fruits');
 
         $cake->save();
 
