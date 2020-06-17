@@ -23,3 +23,7 @@ Route::post('/cakes', 'CakeController@store');
 Route::get('/cakes/{id}', 'CakeController@show');
 Route::DELETE('/cakes/{id}','CakeController@destroy');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
