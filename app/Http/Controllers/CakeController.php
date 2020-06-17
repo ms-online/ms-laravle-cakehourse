@@ -7,6 +7,11 @@ use App\Cake;
 
 class CakeController extends Controller
 {
+
+    // public function __construct(){
+    //     $this->middleware('auth');
+    // }
+
     public function index(){
         $cakes = Cake::all();  
         // $cakes = Cake::orderBy('name', 'desc')->get();

@@ -18,11 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/cakes', 'CakeController@index');
+Route::get('/cakes', 'CakeController@index')->middleware('auth');
 Route::get('/cakes/create', 'CakeController@create');
 Route::post('/cakes', 'CakeController@store');
-Route::get('/cakes/{id}', 'CakeController@show');
-Route::DELETE('/cakes/{id}','CakeController@destroy');
+Route::get('/cakes/{id}', 'CakeController@show')->middleware('auth');
+Route::DELETE('/cakes/{id}','CakeController@destroy')->middleware('auth');
 
 
 Auth::routes();
